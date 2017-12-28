@@ -1,0 +1,27 @@
+
+<% include partials/header.ejs %>
+<% include partials/nav.ejs %>
+
+<div class="jumbotron text-center">
+  <h1>Contact Us</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+  
+<div class="container">
+  <div class="row">
+    <form id="contact-form" method="POST" action="/contact">
+      <label for="who">Person:</label>
+      <input type="text" name="who" value="<%= myUrlString.person %>">
+      <br>
+      <label for="dept">Dept:</label>
+      <input type="text" name="dept" value="<%= myUrlString.dept %>">
+      <br>
+      <label for="email">Email:</label>
+      <input type="text" name="email">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+<!-- -->
+<% include partials/footer.ejs %>
